@@ -1,0 +1,114 @@
+{
+  "Manim Basic Scene": {
+    "prefix": "manim-scene",
+    "body": [
+      "from manim import *",
+      "",
+      "class ${1:MyScene}(Scene):",
+      "    def construct(self):",
+      "        ${2:text} = Text(\"${3:Hello, Manim!}\")",
+      "        self.play(Write(${2:text}))",
+      "        self.wait()"
+    ],
+    "description": "Create a basic Manim scene"
+  },
+  "Manim Moving Camera Scene": {
+    "prefix": "manim-camera",
+    "body": [
+      "from manim import *",
+      "",
+      "class ${1:CameraScene}(MovingCameraScene):",
+      "    def construct(self):",
+      "        ${2:circle} = Circle(color=${3:BLUE})",
+      "        ${4:square} = Square(color=${5:YELLOW}).shift(RIGHT * 3)",
+      "",
+      "        self.play(Create(${2:circle}))",
+      "        self.play(self.camera.frame.animate.move_to(${4:square}).set(width=4))",
+      "        self.play(Create(${4:square}))",
+      "        self.wait()"
+    ],
+    "description": "Create a Manim moving camera scene"
+  },
+  "Manim Text Animation": {
+    "prefix": "manim-text",
+    "body": [
+      "${1:title} = Text(\"${2:Hello, Manim!}\", font_size=${3:48})",
+      "${1:title}.to_edge(UP)",
+      "",
+      "self.play(Write(${1:title}))",
+      "self.play(${1:title}.animate.set_color(${4:YELLOW}))",
+      "self.wait()"
+    ],
+    "description": "Animate text in a Manim scene"
+  },
+  "Manim Math Equation Animation": {
+    "prefix": "manim-math",
+    "body": [
+      "${1:equation} = MathTex(r\"${2:a^2 + b^2 = c^2}\")",
+      "${1:equation}.scale(${3:1.5})",
+      "",
+      "self.play(Write(${1:equation}))",
+      "self.play(${1:equation}.animate.set_color(${4:BLUE}))",
+      "self.wait()"
+    ],
+    "description": "Animate a MathTex equation"
+  },
+  "Manim Graph Axes Example": {
+    "prefix": "manim-axes",
+    "body": [
+      "${1:axes} = Axes(",
+      "    x_range=[${2:-3}, ${3:3}, ${4:1}],",
+      "    y_range=[${5:-1}, ${6:9}, ${7:1}],",
+      "    axis_config={\"color\": ${8:BLUE}},",
+      ")",
+      "${9:graph} = ${1:axes}.plot(lambda x: ${10:x**2}, color=${11:YELLOW})",
+      "${12:label} = ${1:axes}.get_graph_label(${9:graph}, label=\"${13:y=x^2}\")",
+      "",
+      "self.play(Create(${1:axes}), Create(${9:graph}))",
+      "self.play(Write(${12:label}))",
+      "self.wait()"
+    ],
+    "description": "Create axes and plot a graph"
+  },
+  "Manim Square Circle Transform": {
+    "prefix": "manim-transform",
+    "body": [
+      "${1:square} = Square(color=${2:BLUE})",
+      "${3:circle} = Circle(color=${4:GREEN})",
+      "",
+      "self.play(Create(${1:square}))",
+      "self.play(Transform(${1:square}, ${3:circle}))",
+      "self.wait()"
+    ],
+    "description": "Transform a square into a circle"
+  },
+  "Manim VGroup Layout": {
+    "prefix": "manim-vgroup",
+    "body": [
+      "${1:items} = VGroup(",
+      "    Text(\"${2:One}\"),",
+      "    Text(\"${3:Two}\"),",
+      "    Text(\"${4:Three}\"),",
+      ")",
+      "${1:items}.arrange(${5:DOWN}, aligned_edge=${6:LEFT}, buff=${7:0.4})",
+      "",
+      "self.play(LaggedStart(*[Write(item) for item in ${1:items}], lag_ratio=${8:0.2}))",
+      "self.wait()"
+    ],
+    "description": "Create and animate a VGroup layout"
+  },
+  "Manim Updater Example": {
+    "prefix": "manim-updater",
+    "body": [
+      "${1:dot} = Dot(color=${2:YELLOW})",
+      "${3:tracker} = ValueTracker(${4:0})",
+      "",
+      "${1:dot}.add_updater(lambda mob: mob.move_to(RIGHT * ${3:tracker}.get_value()))",
+      "self.add(${1:dot})",
+      "self.play(${3:tracker}.animate.set_value(${5:3}), run_time=${6:2})",
+      "${1:dot}.clear_updaters()",
+      "self.wait()"
+    ],
+    "description": "Create a Manim updater with ValueTracker"
+  }
+}
