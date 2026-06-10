@@ -49,6 +49,19 @@ Available snippet prefixes:
 
 Use tab stops to rename scene classes, variables, text, colors, and other values.
 
+## Run Manim from Zed Tasks
+
+Zed extensions currently do not automatically install tasks. To render Manim scenes from inside Zed, copy `examples/tasks.json` into `.zed/tasks.json` in your own Manim project.
+
+Then:
+
+1. Open a `.py` Manim file.
+2. Open the Command Palette.
+3. Run `task: spawn`.
+4. Choose one of the Manim tasks.
+
+See `docs/tasks.md` for details and task examples.
+
 ## Render the Example
 
 From the repository root, run:
@@ -75,5 +88,5 @@ Please avoid generated media files, Python cache files, unnecessary dependencies
 Suggested commit message:
 
 ```text
-Initial Manim Zed extension with Python snippets
+Document Manim render tasks for Zed
 ```

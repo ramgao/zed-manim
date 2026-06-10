@@ -1,0 +1,26 @@
+[
+  {
+    "label": "Manim: Render Current File Low Quality",
+    "command": "manim",
+    "args": ["-pql", "$ZED_FILE"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false
+  },
+  {
+    "label": "Manim: Render Current File High Quality",
+    "command": "manim",
+    "args": ["-pqh", "$ZED_FILE"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false
+  },
+  {
+    "label": "Manim: Render BasicScene Low Quality",
+    "command": "manim",
+    "args": ["-pql", "$ZED_FILE", "BasicScene"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false
+  }
+]
