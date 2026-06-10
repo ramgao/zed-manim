@@ -115,3 +115,7 @@ Suggested commit message:
 ```text
 Improve Manim Python diagnostics guidance
 ```
+## Helping
+
+But please be welcomed to text me and my up coming team. 
+on any thing I am not the best but I will like to learn from all of you and I can help you too!
