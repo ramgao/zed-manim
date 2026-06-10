@@ -77,6 +77,16 @@ Then:
 
 See `docs/tasks.md` for details and task examples.
 
+## Python Diagnostics
+
+Zed uses basedpyright for Python diagnostics. In Manim projects, `from manim import *` can produce a wildcard import warning even though that style is common in Manim tutorials.
+
+Do not suppress missing import errors. If Zed reports that `manim` cannot be resolved, fix the project virtual environment or selected Python toolchain and make sure Manim is installed.
+
+The wildcard import warning can be disabled for Manim projects by copying [`examples/pyrightconfig.json`](examples/pyrightconfig.json) into your own project as `pyrightconfig.json`.
+
+See [`docs/python-diagnostics.md`](docs/python-diagnostics.md) for details.
+
 ## Render the Example
 
 From the repository root, run:
@@ -103,5 +113,5 @@ Please avoid generated media files, Python cache files, unnecessary dependencies
 Suggested commit message:
 
 ```text
-Expand Manim snippet library
+Improve Manim Python diagnostics guidance
 ```
