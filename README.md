@@ -115,7 +115,35 @@ Suggested commit message:
 ```text
 Improve Manim Python diagnostics guidance
 ```
-## Helping
 
-But please be welcomed to text me and my up coming team. 
-on any thing I am not the best but I will like to learn from all of you and I can help you too!
+# About the crators
+
+## Hi, I'm Yohad Navon.
+
+### I'm learning software engineering through open-source contributions.
+
+### Current Interests
+
+* Linux *(I'm still very new to it, but it has quickly become one of my *biggest obsession.*)*
+* Rust
+* Zed Editor
+* Developer Tools
+* Manim
+* Cybersecurity *(especially Red Hat technologies)*
+* Open Source *(MUST BE OPEN SOURCE)*
+
+### **Current Project**
+
+* **zed-manim**
+
+My goal is to become a strong contributor by understanding how large codebases work, investigating issues carefully, and sharing what I learn along the way while having fun.
+
+If you have feedback, ideas, opportunities, questions, or just want to talk about a project, please reach out. I genuinely mean it—I'm always happy to connect, learn from others, and help where I can.
+
+### Life Interests
+
+* I love playing the drums.
+* I'm a passionate gamer.
+* I'm training to complete an Ironman.
+* I love playing tennis.
+
