@@ -36,18 +36,33 @@ pip install manim
 
 Open a Python file and type one of the snippet prefixes, then accept the completion.
 
-Available snippet prefixes:
-
-- `manim-scene`
-- `manim-camera`
-- `manim-text`
-- `manim-math`
-- `manim-axes`
-- `manim-transform`
-- `manim-vgroup`
-- `manim-updater`
-
 Use tab stops to rename scene classes, variables, text, colors, and other values.
+
+## Snippet Library
+
+| Prefix | What it does |
+| --- | --- |
+| `manim-scene` | Creates a basic `Scene` with text animation |
+| `manim-camera` | Creates a `MovingCameraScene` example |
+| `manim-text` | Adds a text animation inside a scene |
+| `manim-math` | Adds a `MathTex` equation animation |
+| `manim-axes` | Creates axes and plots a graph |
+| `manim-transform` | Transforms a square into a circle |
+| `manim-vgroup` | Creates and animates a `VGroup` layout |
+| `manim-updater` | Adds a `ValueTracker` updater example |
+| `manim-3d` | Creates a basic `ThreeDScene` |
+| `manim-plane` | Creates a `NumberPlane` with coordinates |
+| `manim-function` | Plots a function with `Axes` |
+| `manim-parametric` | Creates a parametric curve |
+| `manim-barchart` | Creates a bar chart |
+| `manim-table` | Creates a table |
+| `manim-matrix` | Creates a matrix with a label |
+| `manim-code` | Creates an animated code block |
+| `manim-brace` | Adds a brace with a label |
+| `manim-vector` | Creates a coordinate plane and vector |
+| `manim-unit-circle` | Starts a unit circle scene |
+| `manim-derivative` | Starts a derivative/tangent line scene |
+| `manim-integral` | Starts an area under curve scene |
 
 ## Run Manim from Zed Tasks
 
@@ -88,5 +103,5 @@ Please avoid generated media files, Python cache files, unnecessary dependencies
 Suggested commit message:
 
 ```text
-Document Manim render tasks for Zed
+Expand Manim snippet library
 ```

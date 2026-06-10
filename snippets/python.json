@@ -110,5 +110,202 @@
       "self.wait()"
     ],
     "description": "Create a Manim updater with ValueTracker"
+  },
+  "Manim 3D Scene": {
+    "prefix": "manim-3d",
+    "body": [
+      "from manim import *",
+      "",
+      "class ${1:ThreeDExample}(ThreeDScene):",
+      "    def construct(self):",
+      "        ${2:axes} = ThreeDAxes()",
+      "        ${3:sphere} = Sphere(radius=${4:1}, color=${5:BLUE})",
+      "",
+      "        self.set_camera_orientation(phi=${6:60} * DEGREES, theta=${7:45} * DEGREES)",
+      "        self.play(Create(${2:axes}), FadeIn(${3:sphere}))",
+      "        self.begin_ambient_camera_rotation(rate=${8:0.2})",
+      "        self.wait(${9:3})",
+      "        self.stop_ambient_camera_rotation()"
+    ],
+    "description": "Create a basic ThreeDScene"
+  },
+  "Manim Number Plane": {
+    "prefix": "manim-plane",
+    "body": [
+      "${1:plane} = NumberPlane(",
+      "    x_range=[${2:-6}, ${3:6}, ${4:1}],",
+      "    y_range=[${5:-4}, ${6:4}, ${7:1}],",
+      "    background_line_style={\"stroke_opacity\": ${8:0.4}},",
+      ")",
+      "${1:plane}.add_coordinates()",
+      "",
+      "self.play(Create(${1:plane}))",
+      "self.wait()"
+    ],
+    "description": "Create and animate a NumberPlane"
+  },
+  "Manim Function Plot": {
+    "prefix": "manim-function",
+    "body": [
+      "${1:axes} = Axes(",
+      "    x_range=[${2:-3}, ${3:3}, ${4:1}],",
+      "    y_range=[${5:-2}, ${6:4}, ${7:1}],",
+      "    tips=False,",
+      ")",
+      "${8:graph} = ${1:axes}.plot(lambda x: ${9:x**2 - 1}, color=${10:YELLOW})",
+      "${11:label} = ${1:axes}.get_graph_label(${8:graph}, label=\"${12:f(x)}\")",
+      "",
+      "self.play(Create(${1:axes}))",
+      "self.play(Create(${8:graph}), Write(${11:label}))",
+      "self.wait()"
+    ],
+    "description": "Plot a function with Axes"
+  },
+  "Manim Parametric Curve": {
+    "prefix": "manim-parametric",
+    "body": [
+      "${1:curve} = ParametricFunction(",
+      "    lambda t: np.array([np.cos(t), np.sin(t), ${2:0}]),",
+      "    t_range=[${3:0}, ${4:TAU}],",
+      "    color=${5:BLUE},",
+      ")",
+      "",
+      "self.play(Create(${1:curve}), run_time=${6:2})",
+      "self.wait()"
+    ],
+    "description": "Create a parametric curve"
+  },
+  "Manim Bar Chart": {
+    "prefix": "manim-barchart",
+    "body": [
+      "${1:chart} = BarChart(",
+      "    values=[${2:3}, ${3:5}, ${4:2}, ${5:4}],",
+      "    bar_names=[\"${6:A}\", \"${7:B}\", \"${8:C}\", \"${9:D}\"],",
+      "    y_range=[${10:0}, ${11:6}, ${12:1}],",
+      "    y_length=${13:4},",
+      "    x_length=${14:6},",
+      "    bar_colors=[${15:BLUE}, ${16:GREEN}, ${17:YELLOW}, ${18:RED}],",
+      ")",
+      "",
+      "self.play(Create(${1:chart}))",
+      "self.wait()"
+    ],
+    "description": "Create a Manim bar chart"
+  },
+  "Manim Table": {
+    "prefix": "manim-table",
+    "body": [
+      "${1:table} = Table(",
+      "    [[\"${2:A}\", \"${3:B}\"], [\"${4:1}\", \"${5:2}\"]],",
+      "    row_labels=[Text(\"${6:Row 1}\"), Text(\"${7:Row 2}\")],",
+      "    col_labels=[Text(\"${8:Col 1}\"), Text(\"${9:Col 2}\")],",
+      "    include_outer_lines=True,",
+      ")",
+      "${1:table}.scale(${10:0.6})",
+      "",
+      "self.play(Create(${1:table}))",
+      "self.wait()"
+    ],
+    "description": "Create and animate a table"
+  },
+  "Manim Matrix": {
+    "prefix": "manim-matrix",
+    "body": [
+      "${1:matrix} = Matrix([[${2:1}, ${3:2}], [${4:3}, ${5:4}]])",
+      "${6:label} = MathTex(r\"${7:A =}\").next_to(${1:matrix}, LEFT)",
+      "",
+      "self.play(Write(${6:label}), Create(${1:matrix}))",
+      "self.wait()"
+    ],
+    "description": "Create and animate a matrix"
+  },
+  "Manim Code Block": {
+    "prefix": "manim-code",
+    "body": [
+      "${1:code} = Code(",
+      "    code=\"\"\"${2:print('Hello, Manim!')}\"\"\",",
+      "    language=\"${3:python}\",",
+      "    background=\"window\",",
+      "    font_size=${4:24},",
+      ")",
+      "",
+      "self.play(Create(${1:code}))",
+      "self.wait()"
+    ],
+    "description": "Create and animate a code block"
+  },
+  "Manim Brace With Label": {
+    "prefix": "manim-brace",
+    "body": [
+      "${1:line} = Line(LEFT * ${2:2}, RIGHT * ${3:2})",
+      "${4:brace} = Brace(${1:line}, direction=${5:DOWN})",
+      "${6:label} = ${4:brace}.get_text(\"${7:length}\")",
+      "",
+      "self.play(Create(${1:line}))",
+      "self.play(GrowFromCenter(${4:brace}), Write(${6:label}))",
+      "self.wait()"
+    ],
+    "description": "Add a brace and label to a mobject"
+  },
+  "Manim Vector Animation": {
+    "prefix": "manim-vector",
+    "body": [
+      "${1:plane} = NumberPlane().add_coordinates()",
+      "${2:vector} = Vector([${3:3}, ${4:2}], color=${5:YELLOW})",
+      "${6:label} = MathTex(r\"${7:\\\\vec{v}}\").next_to(${2:vector}.get_end(), ${8:RIGHT})",
+      "",
+      "self.play(Create(${1:plane}))",
+      "self.play(GrowArrow(${2:vector}), Write(${6:label}))",
+      "self.wait()"
+    ],
+    "description": "Create a coordinate plane and vector"
+  },
+  "Manim Unit Circle": {
+    "prefix": "manim-unit-circle",
+    "body": [
+      "${1:plane} = NumberPlane(x_range=[-2, 2, 1], y_range=[-2, 2, 1]).add_coordinates()",
+      "${2:circle} = Circle(radius=${3:1}, color=${4:BLUE})",
+      "${5:radius} = Line(ORIGIN, ${2:circle}.point_at_angle(${6:PI / 4}), color=${7:YELLOW})",
+      "${8:dot} = Dot(${5:radius}.get_end(), color=${9:RED})",
+      "",
+      "self.play(Create(${1:plane}), Create(${2:circle}))",
+      "self.play(Create(${5:radius}), FadeIn(${8:dot}))",
+      "self.wait()"
+    ],
+    "description": "Create a unit circle starter scene"
+  },
+  "Manim Derivative Tangent": {
+    "prefix": "manim-derivative",
+    "body": [
+      "${1:axes} = Axes(x_range=[${2:-3}, ${3:3}, ${4:1}], y_range=[${5:-1}, ${6:9}, ${7:1}])",
+      "${8:graph} = ${1:axes}.plot(lambda x: ${9:x**2}, color=${10:BLUE})",
+      "${11:x_value} = ${12:1}",
+      "${13:tangent} = ${1:axes}.get_secant_slope_group(",
+      "    x=${11:x_value},",
+      "    graph=${8:graph},",
+      "    dx=${14:0.01},",
+      "    secant_line_color=${15:YELLOW},",
+      "    secant_line_length=${16:4},",
+      ")",
+      "",
+      "self.play(Create(${1:axes}), Create(${8:graph}))",
+      "self.play(Create(${13:tangent}))",
+      "self.wait()"
+    ],
+    "description": "Create a derivative tangent line starter"
+  },
+  "Manim Integral Area": {
+    "prefix": "manim-integral",
+    "body": [
+      "${1:axes} = Axes(x_range=[${2:0}, ${3:4}, ${4:1}], y_range=[${5:0}, ${6:5}, ${7:1}])",
+      "${8:graph} = ${1:axes}.plot(lambda x: ${9:0.5 * x**2 + 1}, x_range=[${10:0}, ${11:3}], color=${12:BLUE})",
+      "${13:area} = ${1:axes}.get_area(${8:graph}, x_range=[${14:0}, ${15:3}], color=${16:GREEN}, opacity=${17:0.4})",
+      "${18:label} = MathTex(r\"${19:\\\\int_a^b f(x)\\\\,dx}\").to_edge(UP)",
+      "",
+      "self.play(Create(${1:axes}), Create(${8:graph}))",
+      "self.play(FadeIn(${13:area}), Write(${18:label}))",
+      "self.wait()"
+    ],
+    "description": "Create an area under curve starter"
   }
 }
