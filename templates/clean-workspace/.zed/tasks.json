@@ -1,0 +1,18 @@
+[
+  {
+    "label": "Manim: Render CleanWorkspaceScene Low Quality",
+    "command": "manim",
+    "args": ["-pql", "$ZED_FILE", "CleanWorkspaceScene"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false
+  },
+  {
+    "label": "Manim: Render CleanWorkspaceScene High Quality",
+    "command": "manim",
+    "args": ["-pqh", "$ZED_FILE", "CleanWorkspaceScene"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false
+  }
+]

@@ -91,6 +91,21 @@ See [`docs/python-diagnostics.md`](docs/python-diagnostics.md) for details.
 
 For a beginner-friendly project layout with Manim diagnostics, pyright configuration, Ruff configuration, and Zed render tasks, see [`examples/clean-workspace`](examples/clean-workspace) and [`docs/clean-workspace.md`](docs/clean-workspace.md).
 
+## Project Templates
+
+Ready-to-use Manim project templates are available in [`templates`](templates). They include clean diagnostics configuration and Zed render tasks for beginner projects, 4K YouTube intros, math education scenes, and 3D showcases.
+
+See [`docs/templates.md`](docs/templates.md) for copy instructions and recommended use cases.
+
+## Example Scenes
+
+Additional Manim learning examples are available in [`examples/scenes`](examples/scenes).
+
+Included examples:
+
+- `parabola_3d.py` — 3D surface/paraboloid animation
+- `quadratic_solution.py` — longer educational quadratic formula animation
+
 ## Render the Example
 
 From the repository root, run:
@@ -117,7 +132,7 @@ Please avoid generated media files, Python cache files, unnecessary dependencies
 Suggested commit message:
 
 ```text
-Add Ruff config for clean Manim workspace
+Add project templates for common Manim workflows
 ```
 
 # About the crators

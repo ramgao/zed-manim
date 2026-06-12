@@ -1,0 +1,18 @@
+[
+  {
+    "label": "Manim: Render YouTubeIntro4K 4K 60fps",
+    "command": "manim",
+    "args": ["-p", "--resolution", "3840,2160", "--fps", "60", "$ZED_FILE", "YouTubeIntro4K"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false
+  },
+  {
+    "label": "Manim: Preview YouTubeIntro4K Low Quality",
+    "command": "manim",
+    "args": ["-pql", "$ZED_FILE", "YouTubeIntro4K"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false
+  }
+]
