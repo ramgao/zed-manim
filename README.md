@@ -87,6 +87,10 @@ The wildcard import warning can be disabled for Manim projects by copying [`exam
 
 See [`docs/python-diagnostics.md`](docs/python-diagnostics.md) for details.
 
+## Clean Workspace
+
+For a beginner-friendly project layout with Manim diagnostics, pyright configuration, and Zed render tasks, see [`examples/clean-workspace`](examples/clean-workspace) and [`docs/clean-workspace.md`](docs/clean-workspace.md).
+
 ## Render the Example
 
 From the repository root, run:
