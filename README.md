@@ -89,7 +89,7 @@ See [`docs/python-diagnostics.md`](docs/python-diagnostics.md) for details.
 
 ## Clean Workspace
 
-For a beginner-friendly project layout with Manim diagnostics, pyright configuration, and Zed render tasks, see [`examples/clean-workspace`](examples/clean-workspace) and [`docs/clean-workspace.md`](docs/clean-workspace.md).
+For a beginner-friendly project layout with Manim diagnostics, pyright configuration, Ruff configuration, and Zed render tasks, see [`examples/clean-workspace`](examples/clean-workspace) and [`docs/clean-workspace.md`](docs/clean-workspace.md).
 
 ## Render the Example
 
@@ -117,7 +117,7 @@ Please avoid generated media files, Python cache files, unnecessary dependencies
 Suggested commit message:
 
 ```text
-Improve Manim Python diagnostics guidance
+Add Ruff config for clean Manim workspace
 ```
 
 # About the crators

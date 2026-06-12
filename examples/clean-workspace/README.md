@@ -6,6 +6,7 @@ It includes:
 
 - `main.py` with beginner-friendly `Scene` and `ThreeDScene` examples
 - `pyrightconfig.json` that keeps standard basedpyright diagnostics but disables the Manim wildcard import false positive
+- `pyproject.toml` that disables only Ruff's wildcard-import false positives for Manim
 - `.zed/tasks.json` with Manim render tasks
 
 ## Set Up
